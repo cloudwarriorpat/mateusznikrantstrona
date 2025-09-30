@@ -16,7 +16,7 @@ const mockPosts = [
     category: 'Treningi',
     publishedDate: '2024-03-15',
     readTime: 5,
-    image: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
   },
   {
     slug: 'jak-zbudowac-nawyk-regularnego-treningu',
@@ -25,7 +25,7 @@ const mockPosts = [
     category: 'Motywacja',
     publishedDate: '2024-03-10',
     readTime: 7,
-    image: 'https://images.pexels.com/photos/4162449/pexels-photo-4162449.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1517836357463-d25dfeac3438?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
   },
   {
     slug: 'dieta-a-wydajnosc-co-jesc-przed-treningiem',
@@ -34,7 +34,7 @@ const mockPosts = [
     category: 'Odżywianie',
     publishedDate: '2024-03-05',
     readTime: 6,
-    image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
+    image: 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80',
   },
 ];
 
@@ -49,12 +49,14 @@ export function BlogPreview() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
-            Najnowsze Artykuły
-          </h2>
-          <p className="text-xl text-text-secondary max-w-2xl mx-auto">
-            Porady treningowe, motywacja i wiedza o high performance
-          </p>
+          <div className="bg-bg-medium/50 border border-red-primary/20 rounded-xl p-6 sm:p-8 lg:p-12 max-w-4xl mx-auto mx-4 sm:mx-0">
+            <h2 className="text-4xl sm:text-5xl font-bold text-white mb-4">
+              Najnowsze Artykuły
+            </h2>
+            <p className="text-xl text-text-secondary max-w-2xl mx-auto">
+              Porady treningowe, motywacja i wiedza o high performance
+            </p>
+          </div>
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
@@ -67,7 +69,7 @@ export function BlogPreview() {
               viewport={{ once: true }}
             >
               <Link href={`/blog/${post.slug}`}>
-                <CustomCard className="p-0 overflow-hidden h-full flex flex-col">
+                <CustomCard className="p-0 overflow-hidden h-full flex flex-col hover-lift bg-bg-medium/50 border-red-primary/20">
                   <div className="relative h-48 group">
                     <Image
                       src={post.image}
@@ -75,6 +77,7 @@ export function BlogPreview() {
                       fill
                       className="object-cover transition-transform duration-300 group-hover:scale-110"
                     />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                     <div className="absolute top-4 left-4">
                       <span className="bg-red-primary/90 text-white px-3 py-1 rounded-full text-sm font-medium">
                         {post.category}

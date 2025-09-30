@@ -24,8 +24,8 @@ export function CustomButton({
   const baseStyles = 'px-8 py-4 rounded-lg font-bold text-lg transition-all duration-300 inline-block';
 
   const variantStyles = {
-    primary: 'bg-red-primary text-white hover:bg-red-dark hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100',
-    secondary: 'border-2 border-red-primary text-red-primary hover:bg-red-primary hover:text-white hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100',
+    primary: 'bg-red-primary text-white hover:bg-red-dark hover:scale-105 hover:shadow-lg hover:shadow-red-primary/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 transition-all duration-300 ease-out',
+    secondary: 'border-2 border-red-primary text-red-primary hover:bg-red-primary hover:text-white hover:scale-105 hover:shadow-lg hover:shadow-red-primary/25 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:scale-100 transition-all duration-300 ease-out',
   };
 
   const combinedClassName = cn(baseStyles, variantStyles[variant], className);

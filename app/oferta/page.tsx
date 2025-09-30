@@ -144,7 +144,7 @@ const faqs = [
 
 export default function OfertaPage() {
   return (
-    <div className="pt-20">
+    <div>
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"

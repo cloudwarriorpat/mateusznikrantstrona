@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="pl">
       <body className={inter.className}>
         <Header />
-        <main className="min-h-screen">
+        <main className="min-h-screen pt-20">
           {children}
         </main>
         <Footer />

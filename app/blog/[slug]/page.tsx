@@ -54,7 +54,7 @@ export default function BlogPostPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen flex items-center justify-center pt-20">
+      <div className="min-h-screen flex items-center justify-center">
         <Loader2 className="animate-spin text-red-primary" size={48} />
       </div>
     );
@@ -62,7 +62,7 @@ export default function BlogPostPage() {
 
   if (!post) {
     return (
-      <div className="min-h-screen flex flex-col items-center justify-center pt-20">
+      <div className="min-h-screen flex flex-col items-center justify-center">
         <h1 className="text-4xl font-bold text-white mb-4">Post nie znaleziony</h1>
         <CustomButton href="/blog" variant="primary">
           Wróć do Bloga
@@ -72,7 +72,7 @@ export default function BlogPostPage() {
   }
 
   return (
-    <div className="pt-20">
+    <div>
       <section className="relative h-[60vh] flex items-end overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"

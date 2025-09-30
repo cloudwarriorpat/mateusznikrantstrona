@@ -33,7 +33,7 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
-        isScrolled ? 'bg-bg-dark/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+        isScrolled ? 'bg-bg-darkest/95 backdrop-blur-lg shadow-xl border-b border-red-primary/20' : 'bg-transparent'
       )}
     >
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -74,11 +74,11 @@ export function Header() {
 
       <div
         className={cn(
-          'md:hidden fixed top-20 left-0 right-0 bg-bg-dark/98 backdrop-blur-md transition-all duration-300 overflow-hidden',
-          isMobileMenuOpen ? 'max-h-screen border-t border-border' : 'max-h-0'
+          'md:hidden fixed top-20 left-0 right-0 bg-bg-darkest/95 backdrop-blur-lg transition-all duration-300 overflow-hidden border-t border-red-primary/20',
+          isMobileMenuOpen ? 'max-h-screen' : 'max-h-0'
         )}
       >
-        <div className="container mx-auto px-4 py-6 space-y-4">
+        <div className="container mx-auto px-6 py-8 space-y-6">
           {navigation.map((item) => {
             const isActive = pathname === item.href || (item.href !== '/' && pathname.startsWith(item.href));
             return (
@@ -87,8 +87,10 @@ export function Header() {
                 href={item.href}
                 onClick={() => setIsMobileMenuOpen(false)}
                 className={cn(
-                  'block text-lg font-medium transition-colors py-2',
-                  isActive ? 'text-red-primary' : 'text-text-secondary hover:text-white'
+                  'block text-xl font-semibold transition-all duration-200 py-3 px-4 rounded-lg',
+                  isActive
+                    ? 'text-red-primary bg-red-primary/10 border-l-4 border-red-primary'
+                    : 'text-white hover:text-red-primary hover:bg-red-primary/5'
                 )}
               >
                 {item.name}

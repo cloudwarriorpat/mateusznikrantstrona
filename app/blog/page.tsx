@@ -35,7 +35,7 @@ export default function BlogPage() {
   };
 
   return (
-    <div className="pt-20">
+    <div>
       <section className="relative min-h-[40vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 bg-cover bg-center"
